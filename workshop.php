@@ -7,7 +7,10 @@
 	
 	$now = date('Y-m-d'); // get today's date
 	$html = file_get_contents('workshop.html'); // get html content from other file
-	$html = str_replace(array('{{date}}','{{member1}}','{{member2}}'), array($now,"Yaqien","Gema"), $html); // replace strings
+	$html = str_replace(
+		array('{{date}}','{{member1}}','{{member2}}'), //find string
+		array($now,"Yaqien","Gema"), //replace string
+		$html); //original text
 	
 	echo $html;
 ?>
