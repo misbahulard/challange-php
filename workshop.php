@@ -14,7 +14,7 @@
 		$html = file_get_contents('workshop-result.html'); // get html content from other file
 		$html = str_replace('{{date}}', $date, $html); // replace {{date}} with our $now variable
 		$html = str_replace('{{time}}', $time, $html); // replace {{date}} with our $now variable
-		$html = str_replace('{{nama}}', $nama, $html); // replace {{date}} with our $now variable
+		$html = str_replace('{{nama}}', $nama, $html); // replace {{date}} with our $now variable 
 	} else {
 		$html = file_get_contents('workshop.html');
 	}
