@@ -1,13 +1,56 @@
-<?php
 
-	/* Your own simple template engine
-	 * it's good to separate php logic from html
-	 * that's why using template engine is considered best practice
-	 * */
-	
-	$now = date('Y-m-d'); // get today's date
-	$html = file_get_contents('workshop.html'); // get html content from other file
-	$html = str_replace('{{date}}', $now, $html); // replace {{date}} with our $now variable
-	
-	echo $html;
-?>
+	<?php
+	if(isset($_POST['hitung'])){
+		$bil1 = $_POST['bil1'];
+		$bil2 = $_POST['bil2'];
+		$operasi = $_POST['operasi'];
+		switch ($operasi) {
+			case 'tambah':
+				$hasil = $bil1+$bil2;
+			break;
+			case 'kurang':
+				$hasil = $bil1-$bil2;
+			break;
+			case 'kali':
+				$hasil = $bil1*$bil2;
+			break;
+			case 'bagi':
+				$hasil = $bil1/$bil2;
+			break;
+		}
+	}
+	?>
+
+		<?php if(isset($_POST['hitung'])){ ?>
+			<input type="text" value="<?php echo $hasil; ?>" class="bil">
+		<?php }else{ ?>
+			<input type="text" value="0" class="bil">
+		<?php } ?>
+
+	<?php
+	if(isset($_POST['hitung'])){
+		$bil1 = $_POST['bil1'];
+		$bil2 = $_POST['bil2'];
+		$operasi = $_POST['operasi'];
+		switch ($operasi) {
+			case 'tambah':
+				$hasil = $bil1+$bil2;
+			break;
+			case 'kurang':
+				$hasil = $bil1-$bil2;
+			break;
+			case 'kali':
+				$hasil = $bil1*$bil2;
+			break;
+			case 'bagi':
+				$hasil = $bil1/$bil2;
+			break;
+		}
+	}
+	?>
+
+		<?php if(isset($_POST['hitung'])){ ?>
+			<input type="text" value="<?php echo $hasil; ?>" class="bil">
+		<?php }else{ ?>
+			<input type="text" value="0" class="bil">
+		<?php } ?>
