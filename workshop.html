@@ -1,9 +1,56 @@
 <html>
 <head>
 		<title>Workshop VCS</title>
+		<style>
+            body {
+                margin: 0px;
+                padding: 0px;
+                background-color: #C70039;
+            }
+		#box {
+            padding-top: 3em;
+			width : 20em;
+            height: 10em;
+            border: 0 solid #FF5733;
+            text-align: center;
+            border-radius: 5%;
+            margin: auto;
+            margin-top: 15em;
+            background-color: #900C3F;
+            
+		}
+            h1{
+                font-family: Segoe UI;
+                color : #FFF;
+            }
+            .inputnama{
+                padding: 0.5em;
+                border: 0px;
+                border-bottom: 4px solid #c70039;
+            }
+            .konfirmasi{
+                padding: 0.5em 1em 0.5em 1em;
+                border: 0px;
+                border-bottom: 4px solid #c70039;
+                background-color: #c70039;
+                color: #fff;
+            }
+            .konfirmasi:hover{
+                padding: 0.5em 1em 0.5em 1em;
+                border: 0px;
+                border-bottom: 4px solid #ffc300;
+                background-color: #c70039;
+                color: #fff;
+            }
+		</style>
 </head>
 <body>
-	<h1>This is Starter Project</h1>	
-	<p>{{date}}</p>
+    <div id="box">
+	<h1>Login</h1>	
+    <form action="workshop.php" method="get">
+    <input class="inputnama" name="nama" type="text" placeholder="Username" >
+    <input class="konfirmasi" type="button" value="Login">
+    </form>
+    </div>
 </body>
 </html>
